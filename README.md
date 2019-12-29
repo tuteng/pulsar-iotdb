@@ -1,6 +1,6 @@
 ## Pulsar IO :: IoTdb
 
-This is a IoTdb Source implementation that can receive data from IoTdb Server, and then publish to Pulsar.
+This is a IoTdb Source implementation that can receive data from IoTdb tsfile, and then publish to Pulsar.
 
 ### Installation
 
