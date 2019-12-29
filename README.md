@@ -4,7 +4,31 @@ This is a IoTdb Source implementation that can receive data from IoTdb Server, a
 
 ### Installation
 
+1. Start Pulsar standalone
+
+```$xslt
+./bin/pulsar standalone -a 127.0.0.1 -nss
+```
+
+2. Clone code and build.
+
+```$xslt
+git clone https://github.com/tuteng/pulsar-iotdb
+cd pulsar-iotdb
 mvn clean install
+```
+
+3. Start connector source
+
+```$xslt
+./bin/pulsar-admin sources localrun -a target/pulsar-iotdb-0.0.1.nar --destination-topic-name iotdb --source-config-file src/main/resources/iotdb-source-config.yaml --name test-iotdb
+```
+
+4. Consume from thie pulsar topic
+
+```$xslt
+./bin/pulsar-client consume -s "iotdb-name" iotdb -n 0
+``` 
 
 ### Configuration
 

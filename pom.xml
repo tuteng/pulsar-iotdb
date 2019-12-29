@@ -31,8 +31,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>io.streamnative.connectors</groupId>
-  <artifactId>puslar-iotdb</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>pulsar-iotdb</artifactId>
   <version>0.0.1</version>
   <name>StreamNative :: Pulsar IoTdb CDC</name>
   <description>Change Data Capture for Apache IoTdb</description>
@@ -176,6 +175,12 @@
       <groupId>org.apache.pulsar</groupId>
       <artifactId>pulsar-client</artifactId>
       <version>${pulsar.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.iotdb/tsfile -->
+    <dependency>
+      <groupId>org.apache.iotdb</groupId>
+      <artifactId>iotdb-jdbc</artifactId>
+      <version>0.9.0</version>
     </dependency>
 
     <!-- test dependencies -->
